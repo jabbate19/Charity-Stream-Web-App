@@ -1,0 +1,38 @@
+[
+  {
+    "id": "265",
+    "displayName": "Iron Ingot",
+    "name": "iron_ingot",
+    "description": "An ingot full of potential. Can be used to craft iron armor, weapons, and tools.",
+    "price": 0.25,
+    "stackSize": 64,
+    "disabled": 0
+  },
+  {
+    "id": "266",
+    "displayName": "Gold Ingot",
+    "name": "gold_ingot",
+    "description": "An ingot full of potential. Can be used to craft gold armor, weapons, and tools.",
+    "price": 0.20,
+    "stackSize": 64,
+    "disabled": 0
+  },
+  {
+    "id": "264",
+    "displayName": "Diamond",
+    "name": "diamond",
+    "description": "A shiny gem. Can be used to craft powerful diamond armor, weapons, and tools.",
+    "price": 1.00,
+    "stackSize": 64,
+    "disabled": 0  
+  },
+  {
+    "id": "262",
+    "displayName": "10x Arrows",
+    "name": "arrow",
+    "description": "The basic ammo for the bow. Comes with 10 arrows!",
+    "price": 0.60,
+    "stackSize": 64,
+    "disabled": 0     
+  }
+]

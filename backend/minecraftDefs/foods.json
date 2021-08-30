@@ -1,0 +1,46 @@
+[
+  {
+    "id": "297",
+    "displayName": "Bread",
+    "name": "bread",
+    "description": "A good basic food.",
+    "effects": "No special effects.",
+    "price": 0.25,
+    "hungerFill": 5,
+    "stackSize": 64,
+    "disabled": 0
+  },
+  {
+    "id": "364",
+    "displayName": "Steak",
+    "name": "cooked_beef",
+    "description": "A very filling food.",
+    "effects": "No special effects.",
+    "price": 0.50,
+    "hungerFill": 8,
+    "stackSize": 64,
+    "disabled": 0
+  },
+  {
+    "id": "322-0",
+    "displayName": "Golden Apple",
+    "name": "golden_apple",
+    "description": "Filled with magic, this powerful apple grants you extra health!",
+    "effects": "Absorption for 2 minutes and regeneration for 5 seconds!",
+    "price": 1.00,
+    "hungerFill": 4,
+    "stackSize": 64,
+    "disabled": 0
+  },
+  {
+    "id": "322-1",
+    "displayName": "Enchanted Golden Apple",
+    "name": "enchanted_golden_apple",
+    "description": "The ultimate food, this apple makes the player tough and filled with vitality!",
+    "effects": "Absorption 4 for 2 minutes, Regeneration 2 for 20 seconds, and Fire Resistance and Damage Resistance for 5 minutes!",
+    "price": 10.00,
+    "hungerFill": 4,
+    "stackSize": 64,
+    "disabled": 0
+  }
+]

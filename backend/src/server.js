@@ -1,20 +1,23 @@
 /* eslint-disable no-console */
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const {
-  createItems, 
-  createPlayer, 
-  createEffects, 
-  createMobs, 
-  getItems, 
-  getPlayers, 
-  getEffects, 
+  createItems,
+  createPlayer,
+  createEffects,
+  createMobs,
+  getItems,
+  getPlayers,
+  getEffects,
   getMobs,
   getCheckoutStatus,
   disableCheckout,
   disableElement,
 } = require('./handlers');
 const { getImages } = require('./images');
+const { testConnection } = require('./sql/sqlConnection');
+const { createTables } = require('./sql/models');
 
 const app = express();
 const port = 8000;
@@ -35,4 +38,8 @@ app.get('/mobs', getMobs);
 app.get('/images/:type/:image', getImages);
 app.get('/checkout/status', getCheckoutStatus);
 
-app.listen(port, console.log(`Listening on port at http://localhost:${port}`));
+app.listen(port, async () => {
+  await testConnection();
+  createTables();
+  console.log(`Listening on port at http://localhost:${port}`);
+});

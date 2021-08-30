@@ -1,0 +1,210 @@
+[
+  {
+    "id": "257",
+    "displayName": "Iron Pickaxe",
+    "name": "iron_pickaxe",
+    "description": "A basic but durable pickaxe. Breaks rocks!",
+    "price": 0.65,
+    "stackSize": 1,
+    "speed": 1,
+    "durability": 250,
+    "enchantCategories": [
+      "digger",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+  },
+  {
+    "id": "285",
+    "displayName": "Gold Pickaxe",
+    "name": "gold_pickaxe",
+    "description": "A fast but flimsy pickaxe. Breaks rocks!",
+    "price": 0.50,
+    "speed": 1.5,
+    "durability": 32,
+    "stackSize": 1,
+    "enchantCategories": [
+      "digger",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+  },
+  {
+    "id": "278",
+    "displayName": "Diamond Pickaxe",
+    "name": "diamond_pickaxe",
+    "description": "A very fast and durable pickaxe. Breaks rocks!",
+    "price": 3.00,
+    "speed": 4,
+    "durability": 1561,
+    "stackSize": 1,
+    "enchantCategories": [
+      "digger",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+  },
+  {
+    "id": "256",
+    "displayName": "Iron Shovel",
+    "name": "iron_shovel",
+    "description": "A basic but durable shovel. Breaks dirt/gravel/sand!",
+    "price": 0.30,
+    "speed": 1,
+    "durability": 250,
+    "stackSize": 1,
+    "enchantCategories": [
+      "digger",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+  },
+  {
+    "id": "284",
+    "displayName": "Gold Shovel",
+    "name": "gold_shovel",
+    "description": "A fast but flimsy shovel. Breaks dirt/gravel/sand!",
+    "price": 0.25,
+    "speed": 1.5,
+    "durability": 32,
+    "stackSize": 1,
+    "enchantCategories": [
+      "digger",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+  },
+  {
+    "id": "277",
+    "displayName": "Diamond Shovel",
+    "name": "diamond_shovel",
+    "description": "A very fast and durable shovel. Breaks dirt/gravel/sand!",
+    "price": 1.00,
+    "speed": 4,
+    "durability": 1561,
+    "stackSize": 1,
+    "enchantCategories": [
+      "digger",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+  },
+  {
+    "id": "258",
+    "displayName": "Iron Axe",
+    "name": "iron_axe",
+    "description": "A basic but durable axe. Chops wood!",
+    "price": 0.65,
+    "speed": 1,
+    "durability": 250,
+    "stackSize": 1,
+    "enchantCategories": [
+      "digger",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+},
+{
+    "id": "286",
+    "displayName": "Gold Axe",
+    "name": "gold_axe",
+    "description": "A fast but flimsy axe. Chops wood!",
+    "price": 0.50,
+    "speed": 1.5,
+    "durability": 32,
+    "stackSize": 1,
+    "enchantCategories": [
+      "digger",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+  },
+  {
+    "id": "279",
+    "displayName": "Diamond Axe",
+    "name": "diamond_axe",
+    "description": "A very fast and durable axe. Chops wood!",
+    "price": 3.00,
+    "speed": 4,
+    "durability": 1561,
+    "stackSize": 1,
+    "enchantCategories": [
+      "digger",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+  },
+  {
+    "id": "272",
+    "displayName": "Stone Sword",
+    "name": "stone_sword",
+    "description": "The basic weapon for combat. Help your favorite player triump in battle!",
+    "price": 0.30,
+    "damage": 5,
+    "durability": 131,
+    "stackSize": 1,
+    "enchantCategories": [
+      "weapon",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+  },
+  {
+    "id": "267",
+    "displayName": "Iron Sword",
+    "name": "iron_sword",
+    "description": "An upgraded sword for combat. Help your favorite player triump in battle!",
+    "price": 0.50,
+    "damage": 6,
+    "durability": 250,
+    "stackSize": 1,
+    "enchantCategories": [
+      "weapon",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+  },
+  {
+    "id": "276",
+    "displayName": "Diamond Sword",
+    "name": "diamond_sword",
+    "description": "The ultimate sword for combat. Help your favorite player triump in battle with style!",
+    "price": 2.00,
+    "damage": 7,
+    "durability": 1561,
+    "stackSize": 1,
+    "enchantCategories": [
+      "weapon",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+  },
+  {
+    "id": "261",
+    "displayName": "Bow",
+    "name": "bow",
+    "description": "Minecraft's signature ranged weapon. Can take out foes at a distance!",
+    "price": 1.50,
+    "damage": 6,
+    "durability": 384,
+    "stackSize": 1,
+    "enchantCategories": [
+      "bow",
+      "breakable",
+      "vanishable"
+    ],
+    "disabled": 0
+  }
+]

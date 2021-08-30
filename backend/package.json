@@ -16,13 +16,15 @@
     "dependencies": {
         "body-parser": "^1.19.0",
         "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
         "express": "^4.17.1",
-        "mysql2": "^2.2.5"
+        "mysql2": "^2.2.5",
+        "sequelize": "^6.6.5"
     },
     "devDependencies": {
-        "eslint": "^7.10.0",
-        "eslint-config-airbnb-base": "^14.2.0",
-        "eslint-plugin-import": "^2.22.1",
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-plugin-import": "^2.24.2",
         "nodemon": "^2.0.4"
     }
 }
