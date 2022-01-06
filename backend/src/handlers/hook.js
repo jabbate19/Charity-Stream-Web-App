@@ -34,8 +34,7 @@ module.exports = {
       } else {
         console.log(`Unhandled event type ${event.type}`);
       }
+      res.json({ received: true });
     }
-    // Return a response to acknowledge receipt of the event
-    res.json({ received: true });
   },
 };

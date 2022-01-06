@@ -24,6 +24,7 @@ const { basicAuth } = require('./handlers/authentication');
 const app = express();
 const port = 8080;
 
+app.post('/hook', express.raw({type: 'application/json'}), hook);
 app.use(express.json());
 app.use(cors());
 
@@ -35,7 +36,6 @@ app.get('/data', getData);
 app.get('/mobs', getMobs);
 app.get('/images/:type/:image', getImages);
 app.post('/checkout', createCheckout);
-app.post('/hook', express.raw({type: 'application/json'}), hook);
 
 // This tells node to use auth for the routes below here
 app.use(basicAuth);
