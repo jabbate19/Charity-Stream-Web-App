@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
 const {
   createItems,
   createPlayer,
@@ -36,7 +35,7 @@ app.get('/data', getData);
 app.get('/mobs', getMobs);
 app.get('/images/:type/:image', getImages);
 app.post('/checkout', createCheckout);
-app.post('/hook', bodyParser.raw({type: 'application/json'}), hook);
+app.post('/hook', express.raw({type: 'application/json'}), hook);
 
 // This tells node to use auth for the routes below here
 app.use(basicAuth);
