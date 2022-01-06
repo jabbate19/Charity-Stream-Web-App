@@ -16,7 +16,7 @@ module.exports = {
     } catch (err) {
       res.status(400).send(`Webhook Error: ${err.message}`);
     }
-
+    console.log(event);
     // Handle the event
     if (event.type === 'checkout.session.completed') {
       const commands = JSON.parse(event.data.object.metadata.commands);
