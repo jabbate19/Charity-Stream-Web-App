@@ -24,9 +24,12 @@ const { basicAuth } = require('./handlers/authentication');
 const app = express();
 const port = 8080;
 
-app.post('/hook', express.raw({type: 'application/json'}), hook);
-app.use(express.json());
 app.use(cors());
+
+app.use('/hook', express.raw({ type: '*/*' }));
+app.post('/hook', express.raw({type: 'application/json'}), hook);
+
+app.use(express.json());
 
 // Routes that do not require auth
 app.get('/items', getItems);
