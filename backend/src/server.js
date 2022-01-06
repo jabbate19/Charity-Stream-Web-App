@@ -16,6 +16,7 @@ const {
   disableElement,
   dataCallback,
   getData,
+  hook,
 } = require('./handlers');
 const { getImages } = require('./images');
 const { basicAuth } = require('./handlers/authentication');
@@ -34,7 +35,7 @@ app.get('/data', getData);
 app.get('/mobs', getMobs);
 app.get('/images/:type/:image', getImages);
 app.post('/checkout', createCheckout);
-
+app.post('/hook', hook);
 
 // This tells node to use auth for the routes below here
 app.use(basicAuth);
