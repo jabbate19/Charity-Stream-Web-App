@@ -16,25 +16,26 @@ module.exports = {
     } catch (err) {
       res.status(400).send(`Webhook Error: ${err.message}`);
     }
-    console.log(event);
-    // Handle the event
-    if (event.type === 'checkout.session.completed') {
-      const commands = JSON.parse(event.data.object.metadata.commands);
-      if (commands) {
-        rcon.connect().then(() => {
-          commands.forEach(async (cmd) => {
-            rcon.send(cmd).then((result) => {
-              console.log(result);
+    
+    if (event) {
+      // Handle the event
+      if (event.type === 'checkout.session.completed') {
+        const commands = JSON.parse(event.data.object.metadata.commands);
+        if (commands) {
+          rcon.connect().then(() => {
+            commands.forEach(async (cmd) => {
+              rcon.send(cmd).then((result) => {
+                console.log(result);
+              });
             });
+          }).then(() => {
+            rcon.disconnect();
           });
-        }).then(() => {
-          rcon.disconnect();
-        });
+        }
+      } else {
+        console.log(`Unhandled event type ${event.type}`);
       }
-    } else {
-      console.log(`Unhandled event type ${event.type}`);
     }
-
     // Return a response to acknowledge receipt of the event
     res.json({ received: true });
   },
