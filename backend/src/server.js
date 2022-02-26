@@ -44,7 +44,6 @@ app.post('/checkout', createCheckout);
 app.post('/hook', hook);
 
 // This tells node to use auth for the routes below here
-app.use(basicAuth);
 
 // Everything below this point should require auth
 app.put('/disable/:type/:id', disableElement);
