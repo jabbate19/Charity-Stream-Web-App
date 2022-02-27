@@ -52,11 +52,12 @@ module.exports = {
   createCheckout : async (req, res) => {
     try {
       let line = [];
+      let commands = [];
       let realName = await verifyPlayer(req.body['username']);
       for( var i = 0; i < req.body['cart'].length; i++ ){
         element = req.body['cart'][i]
         await verifyPurchase(element).then(verify => {
-          console.log(`${element.id} | ${verify}`);
+          // console.log(`${element.id} | ${verify}`);
           if ( verify ){
             let name = `${req.body['username']} [${realName}] | ${element.name}`;
             let cost = element.price*100;
@@ -67,12 +68,20 @@ module.exports = {
               cost *= (element.time/30)*(element.power+1);
               amount = 1;
               cmd = `effect give ${req.body['username']} ${element.id} ${element.time} ${element.power+1}`;
+              commands.push(cmd);
+            } else if (element.type == "mob"){
+              amount = element.amount;
+              for(var i = 0; i < amount; i++){
+                cmd = `execute as ${req.body['username']} at ${req.body['username']} run summon ${element.id} ~ ~ ~`;
+                commands.push(cmd);
+              }
             } else {
               amount = element.amount;
-              cmd = `give ${req.body['username']} minecraft:${element.id}`;
+              cmd = `give ${req.body['username']} ${element.id} ${element.amount}`;
               if (element.id == 'arrow'){
                 cmd += ' 10';
               }
+              commands.push(cmd);
             }
             line.push(
               {
@@ -82,9 +91,6 @@ module.exports = {
                     name: name,
                     description: element.description,
                     images: [element.icon],
-                    metadata: {
-                      command: cmd
-                    }
                   },
                   unit_amount: cost
                 },
@@ -100,6 +106,7 @@ module.exports = {
           mode: 'payment',
           success_url: `https://${process.env.DOMAIN}/?success=true`,
           cancel_url: `https://${process.env.DOMAIN}?canceled=true`,
+          metadata: commands,
         });
         res.redirect(303, session.url);
       } else {
