@@ -102,7 +102,7 @@ module.exports = {
               }
             );
           }
-        }
+        });
       }
       if (line.length === req.body.cart.length && realName != null) {
         const session = await stripe.checkout.sessions.create({
